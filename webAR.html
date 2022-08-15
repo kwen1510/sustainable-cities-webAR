@@ -20,8 +20,8 @@
         >
           <a-assets>
             <a-asset-item
-              id="demo"
-              src="demo.gltf"
+              id="riyadh"
+              src="riyadh.gltf"
             >
                 
             <!-- second asset -->
@@ -29,20 +29,39 @@
               id="congo"
               src="congo.glb"
             >
+
+            <!-- third asset -->
+             <a-asset-item
+              id="singapore"
+              src="singapore.glb"
+            >
+
+            <!-- fourth asset -->
+             <a-asset-item
+              id="newOrleans"
+              src="newOrleans.glb"
+            >
+
+            <!-- fifth asset -->
+             <a-asset-item
+              id="demo2"
+              src="demo2.glb"
+            >
+
           </a-assets>
 
           <a-marker
             preset='custom' 
             type='pattern' 
-            url='demo.patt'
+            url='riyadh.patt'
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
             id="markerA"
           >
             <a-entity
-              id="demo-model"
-              gltf-model="#demo"
+              id="riyadh-model"
+              gltf-model="#riyadh"
               position="0 0 0"
               scale="0.5 0.5 0.5"
               class="clickable"
@@ -55,7 +74,7 @@
             <a-marker
             preset='custom' 
             type='pattern' 
-            url='demo2.patt'
+            url='congo.patt'
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
@@ -64,6 +83,69 @@
             <a-entity
               id="congo-model"
               gltf-model="#congo"
+              position="0 0 0"
+              scale="0.5 0.5 0.5"
+              class="clickable"
+              gesture-handler
+            >
+            </a-entity>
+          </a-marker>
+            
+<!-- third marker -->
+            <a-marker
+            preset='custom' 
+            type='pattern' 
+            url='singapore.patt'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerA"
+          >
+            <a-entity
+              id="singapore-model"
+              gltf-model="#singapore"
+              position="0 0 0"
+              scale="0.5 0.5 0.5"
+              class="clickable"
+              gesture-handler
+            >
+            </a-entity>
+          </a-marker>
+                
+<!-- fourth marker -->
+            <a-marker
+            preset='custom' 
+            type='pattern' 
+            url='newOrleans.patt'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerA"
+          >
+            <a-entity
+              id="newOrleans-model"
+              gltf-model="#newOrleans"
+              position="0 0 0"
+              scale="0.5 0.5 0.5"
+              class="clickable"
+              gesture-handler
+            >
+            </a-entity>
+          </a-marker>
+
+<!-- fifth marker -->
+            <a-marker
+            preset='custom' 
+            type='pattern' 
+            url='demo2.patt'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerA"
+          >
+            <a-entity
+              id="demo2-model"
+              gltf-model="#demo2"
               position="0 0 0"
               scale="0.5 0.5 0.5"
               class="clickable"
